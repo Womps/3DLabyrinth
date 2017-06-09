@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{03176FA8-3F62-4CDE-A90D-F692D8531D4F}</ProjectGuid>
+    <RootNamespace>OpenGL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>E:\Utilisateurs\rom44\OneDrive\Documents\Cours\JIN\MER\OpenGL\0_Cours_OpenGL\0 Bibliothèques\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Utilisateurs\rom44\OneDrive\Documents\Cours\JIN\MER\OpenGL\0_Cours_OpenGL\0 Bibliothèques\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>E:\Utilisateurs\rom44\OneDrive\Documents\Cours\JIN\MER\OpenGL\0_Cours_OpenGL\0 Bibliothèques\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Utilisateurs\rom44\OneDrive\Documents\Cours\JIN\MER\OpenGL\0_Cours_OpenGL\0 Bibliothèques\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;glew32.lib;opengl32.lib;assimp-vc120-mt.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;glew32.lib;opengl32.lib;assimp-vc120-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;glew32.lib;opengl32.lib;assimp-vc120-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\camera.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\OpenGLTools\contextinitializer.cpp" />
+    <ClCompile Include="..\OpenGLTools\device.cpp" />
+    <ClCompile Include="..\OpenGLTools\framebuffer.cpp" />
+    <ClCompile Include="..\OpenGLTools\Input\keyboardinput.cpp" />
+    <ClCompile Include="..\OpenGLTools\Input\mouseinput.cpp" />
+    <ClCompile Include="..\OpenGLTools\Input\windowinput.cpp" />
+    <ClCompile Include="..\OpenGLTools\Model\material.cpp" />
+    <ClCompile Include="..\OpenGLTools\Model\mesh.cpp" />
+    <ClCompile Include="..\OpenGLTools\Model\modelimporter.cpp" />
+    <ClCompile Include="..\OpenGLTools\Model\modelrenderer.cpp" />
+    <ClCompile Include="..\OpenGLTools\program.cpp" />
+    <ClCompile Include="..\OpenGLTools\shader.cpp" />
+    <ClCompile Include="..\OpenGLTools\shaderrepository.cpp" />
+    <ClCompile Include="..\OpenGLTools\texture.cpp" />
+    <ClCompile Include="..\OpenGLTools\texturerepository.cpp" />
+    <ClCompile Include="..\Scene\Scene.cpp" />
+    <ClCompile Include="..\Scene\SceneDisplayer.cpp" />
+    <ClCompile Include="..\Scene\SceneLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\camera.h" />
+    <ClInclude Include="..\OpenGLTools\contextinitializer.h" />
+    <ClInclude Include="..\OpenGLTools\device.h" />
+    <ClInclude Include="..\OpenGLTools\framebuffer.h" />
+    <ClInclude Include="..\OpenGLTools\glm.h" />
+    <ClInclude Include="..\OpenGLTools\Input\abstractinput.h" />
+    <ClInclude Include="..\OpenGLTools\Input\keyboardinput.h" />
+    <ClInclude Include="..\OpenGLTools\Input\mouseinput.h" />
+    <ClInclude Include="..\OpenGLTools\Input\windowinput.h" />
+    <ClInclude Include="..\OpenGLTools\Model\material.h" />
+    <ClInclude Include="..\OpenGLTools\Model\mesh.h" />
+    <ClInclude Include="..\OpenGLTools\Model\modelimporter.h" />
+    <ClInclude Include="..\OpenGLTools\Model\modelrenderer.h" />
+    <ClInclude Include="..\OpenGLTools\program.h" />
+    <ClInclude Include="..\OpenGLTools\shader.h" />
+    <ClInclude Include="..\OpenGLTools\shaderrepository.h" />
+    <ClInclude Include="..\OpenGLTools\texture.h" />
+    <ClInclude Include="..\OpenGLTools\texturerepository.h" />
+    <ClInclude Include="..\OpenGLTools\tools.h" />
+    <ClInclude Include="..\Scene\Scene.h" />
+    <ClInclude Include="..\Scene\SceneDisplayer.h" />
+    <ClInclude Include="..\Scene\SceneLoader.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
